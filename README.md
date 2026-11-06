@@ -25,9 +25,10 @@ Everything else is the official plugin — see the documentation below.
 ## Install
 
 ```bash
-hermes plugins install Bendak/hermes-homeassistant-deliver --force --ref <40-char-sha>
+hermes plugins install Bendak/hermes-homeassistant-deliver --force --ref 1eb6d96f638bf3b9753f9a87209c4487d191e384
 ```
 
+- **Current pin:** `v2.1.0` → `1eb6d96f638bf3b9753f9a87209c4487d191e384` (see the release notes for what it carries).
 - Requires Hermes **>= 0.21.5** (validated on 0.22.x and 0.23.0).
 - The plugin name is `homeassistant`, so `--force` swaps the code in `plugins/homeassistant`.
   `plugins.enabled` and your `platforms.homeassistant` config stay untouched. Restart the
