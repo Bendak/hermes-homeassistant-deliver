@@ -275,3 +275,21 @@ PYTHONPATH=/path/to/hermes-agent python -m pytest tests -q
 ## License
 
 MIT, see [LICENSE](LICENSE). Copyright (c) 2026 Nous Research.
+
+## Keeping in sync with upstream
+
+The official plugin keeps moving. To check what landed upstream since the last sync:
+
+```bash
+git remote add upstream https://github.com/NousResearch/hermes-official-plugins.git
+git fetch upstream main
+git log --oneline -1 -- homeassistant/ upstream/main   # tip check
+git diff HEAD~1 --stat                                  # our last sync
+# what changed upstream in the plugin subtree since we cloned it:
+git show upstream/main:homeassistant/adapter.py > /tmp/upstream-adapter.py
+diff -u /tmp/upstream-adapter.py adapter.py
+```
+
+Apply upstream fixes by porting the hunk (our `adapter.py` is the official adapter plus the
+`deliver`/`deliver_mode` feature), then re-run `python -m pytest -q`. The suite is the gate:
+**217 passed, 2 skipped** at the time of publishing this fork.
