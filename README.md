@@ -1,5 +1,18 @@
 <p align="center"><img src="../assets/homeassistant.jpg" alt="Home Assistant: official Hermes Agent plugin" width="100%"></p>
 
+> **⚠️ Archived — this feature lives upstream now.**
+>
+> This fork carried `deliver` / `deliver_mode: session` while the upstream PR waited. It landed in
+> `NousResearch/hermes-official-plugins` (main, PR #451) and ships through the official plugin
+> catalog. Use the official plugin:
+>
+> ```
+> hermes plugins install 'NousResearch/hermes-official-plugins#homeassistant' --force
+> ```
+>
+> The last fork build (v2.1.3, `ba3cc664`) stays here as a rollback reference.
+
+
 # Home Assistant for Hermes Agent
 
 > Part of the [Hermes Official Plugins](../README.md), Nous Research's official plugins for Hermes Agent. Formerly [`NousResearch/hermes-homeassistant`](https://github.com/NousResearch/hermes-homeassistant), which is archived; this directory carries its full history.
